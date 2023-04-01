@@ -23,3 +23,30 @@ function displayConsFact() {
     num2 = 0;
   }
 }
+
+const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': 'a49317e4b4msh6daa56072beb91ep1817d8jsn36589b54d158',
+		'X-RapidAPI-Host': 'despam-spam-filter.p.rapidapi.com'
+	},
+	body: '{"text":"Congratulations you have won, 1 billion dollars. Enter you bank account details to redeem. Offer valid only till this week"}'
+};
+
+var prob
+async function checkSpam(){
+  fetch('https://despam-spam-filter.p.rapidapi.com/api/v1/api-hub/spam-prediction', options)
+	.then(response => response.json())
+	.then(function(response){
+    prob = response.spamProbability;
+    document.getElementById('result').innerText = `This email has has a ${prob*100}% chance of being spam!`
+  })
+	.catch(err => console.error(err));
+}
+
+function check() {
+   let text = document.getElementById('spamtext').value
+   options.body = `{"text":"${text}"}`
+    checkSpam();
+}

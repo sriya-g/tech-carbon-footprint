@@ -129,6 +129,29 @@ a:hover{
   font-size:1.2em;
   margin-bottom:20px;
 }
-#consfactspace, #busifactspace {
+
+.emailverify{
+  font-family: 'Playfair Display', serif;
+  text-align:left;
+  font-size:1.7em;
+}
+
+.emailverify p{
+  font-size:0.7em;
   font-family: "Montserrat", sans-serif;
+}
+
+textarea{
+  height:100px;
+  width:300px;
+}
+
+.check{
+  background:#D1DBBD;
+  height:30px;
+  border-radius:12px;
+  margin-left:20px;
+  margin-top:0px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom:30px;
 }
