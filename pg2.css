@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.main{
+  background-color: #193441;
+}
+
+.info{
+  width:50%;
+  color: #D1DBBD;
+  border: 1px solid white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.guessGame{
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
