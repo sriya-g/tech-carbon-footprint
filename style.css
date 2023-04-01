@@ -44,10 +44,15 @@ form {
   border-radius: 20px;
 }
 .subbutton {
-  margin: 2%;
-  border-radius: 2px;
+  margin: 4%;
+  padding: 8px;
+  border-radius: 12px;
   align: left;
   color: #193441;
   background-color: #D1DBBD;
   font-family: "Montserrat", sans-serif;
+}
+.results {
+  color: #193441;
+  background-color: #fffff4;
 }
