@@ -28,6 +28,7 @@ $amtCarbonEmitted = $vals[0]*4.61 + $vals[1]*55 + $vals[3]*3.7 + $vals[2]*50 + $
 $amtCarbonEmitted = $amtCarbonEmitted/1000;
 
 $carbonGrams = array($diffWebs*4.61, $hrsStreaming*55, $hrsZoomTogether*50, $hrsZoom1to1*3.7, $hrsmining*60200, $numEmails*13, $numPhotos*50, $numSearches*0.2, $numTweets*0.02, $numTexts*0.014);
+$namesOfActivities = array("opening websites", "streaming video", "group video calls", "1:1 video calls", "cryptocurrency", "sending emails", "sending photos", "online searches", "Tweeting", "SMS texting");
 $carbonGrams2 = $carbonGrams;
 rsort($carbonGrams2, 1);
 $carbonGrams2 = array_slice($carbonGrams2, 0, 3);
@@ -45,7 +46,7 @@ $indexes = array(-1, -1, -1);
   <p>Your tech use emits about <?php echo $amtCarbonEmitted ?> kilograms of carbon dioxide per day.</p>
   <p>That's about <?php echo $amtCarbonEmitted*365 ?> kilograms per year.</p>
   <p>(For context, the average American emits a total of 20000 kilograms of carbon dioxide per year.)</p>
-  <p>Your highest carbon emissions were </p>
+  <p>Your highest carbon emissions were <?php echo $namesOfActivities[$indexes[0]] ?>, <?php echo $namesOfActivities[$indexes[1]] ?>, and <?php echo $namesOfActivities[$indexes[2]] ?>.</p>
   <h3>Here are some suggestions to reduce your carbon emissions!</h3>
 </div>
 </body>
