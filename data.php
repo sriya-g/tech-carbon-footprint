@@ -29,6 +29,9 @@ $amtCarbonEmitted = $amtCarbonEmitted/1000;
 
 $carbonGrams = array($diffWebs*4.61, $hrsStreaming*55, $hrsZoomTogether*50, $hrsZoom1to1*3.7, $hrsmining*60200, $numEmails*13, $numPhotos*50, $numSearches*0.2, $numTweets*0.02, $numTexts*0.014);
 $namesOfActivities = array("opening websites", "streaming video", "group video calls", "1:1 video calls", "cryptocurrency", "sending emails", "sending photos", "online searches", "Tweeting", "SMS texting");
+$vid = array("Download videos instead of streaming them - downloading means you can view the video multiple times from your local data instead of streaming and accessing the video on servers each time", "When listening to music, listen to audio files instead of streaming the music video", "Stream videos in lower quality");
+$serch = array("Make higher-quality searches so you will need to search less", "Switch to a search engine that offsets carbon emissions");
+$reduce = array("Open less websites", implode(', ', $vid), "Reduce the quality of the video on your call", "Consider sending an email instead of video calling", "Avoid using or mining cryptocurrency", "Send short emails without large attachments or photos", "Reduce the quality of photos before sending them", implode(', ', $serch), "Tweet less", "Text less");
 $carbonGrams2 = $carbonGrams;
 rsort($carbonGrams2, 1);
 $carbonGrams2 = array_slice($carbonGrams2, 0, 3);
@@ -48,6 +51,11 @@ $indexes = array(-1, -1, -1);
   <p>(For context, the average American emits a total of 20000 kilograms of carbon dioxide per year.)</p>
   <p>Your highest carbon emissions were <?php echo $namesOfActivities[$indexes[0]] ?>, <?php echo $namesOfActivities[$indexes[1]] ?>, and <?php echo $namesOfActivities[$indexes[2]] ?>.</p>
   <h3>Here are some suggestions to reduce your carbon emissions!</h3>
+  <ul>
+    <li><?php echo $reduce[$indexes[0]] ?></li>
+    <li><?php echo $reduce[$indexes[1]] ?></li>
+    <li><?php echo $reduce[$indexes[2]] ?></li>
+  </ul>
 </div>
 </body>
 </html>

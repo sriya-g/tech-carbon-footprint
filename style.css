@@ -5,6 +5,7 @@ html, body {
   color: #193441;;
   height: 100%;
   width: 100%;
+  max-width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 nav{
@@ -38,13 +39,14 @@ a:hover{
   text-align: center;
 }
 form {
-  margin: 10px;
-  padding: 15px;
+  margin: 2%;
+  padding: 2%;
   background-color: #fffff4;
   border-radius: 20px;
+  align: center;
 }
 .subbutton {
-  margin: 4%;
+  margin: 8px;
   padding: 8px;
   border-radius: 12px;
   align: left;
@@ -55,8 +57,9 @@ form {
 .results {
   color: #193441;
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  margin: 2%;
+  padding: 2%;
   background-color: #fffff4;
   border-radius: 20px;
+  align: center;
 }
