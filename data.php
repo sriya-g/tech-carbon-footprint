@@ -31,6 +31,8 @@ $amtCarbonEmitted = $amtCarbonEmitted/1000;
   <p>Your tech use emits about <?php echo $amtCarbonEmitted ?> kilograms of carbon dioxide per day.</p>
   <p>That's about <?php echo $amtCarbonEmitted*365 ?> kilograms per year.</p>
   <p>(For context, the average American emits a total of 20000 kilograms of carbon dioxide per year.)</p>
+  <p>Your highest carbon emissions were </p>
+  <h3>Here are some suggestions to reduce your carbon emissions!</h3>
 </div>
 </body>
 </html>
