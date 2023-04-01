@@ -1,0 +1,15 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  background-image: linear-gradient(#f1edeb 50%, #f3fadc 50%);
+}
+.header {
+  text-align: center;
+}
+form {
+  margin: 5%;
+  padding: 5%;
+  background-color: #f8f9f9;
+  border-radius: 20px;
+}

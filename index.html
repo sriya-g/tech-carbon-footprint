@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <h1 class = "header"> Tech Carbon Footprint Calculator</h1>
+  <h2 class = "header">Take the survey below to calculate your carbon usage!</h2>
+  <form action = "data.php" method="post">
+    <p>How much do you spend on electricity in a typical month?</p>
+    <label>$</label>
+    <input type = "number" name = "q1">
+    <p>How much do you spend on gas in a typical month?</p>
+    <label>$</label>
+    <input type = "number" name = "q2">
+    <p>How much do you spend on oil in a typical month?</p>
+    <label>$</label>
+    <input type = "number" name = "q3">
+    <p>What is the average yearly mileage on your car?</p>
+    <input type = "number" name = "q4">
+    <label>miles</label>
+    <p>What is the average yearly mileage on your car (if more than one)?</p>
+    <input type = "number" name = "q5">
+    <label>miles</label>
+    <p>About how many flights have you taken in the past year (4 hours or less)?</p>
+    <input type = "number" name = "q6">
+    <p>About how many flights have you taken in the past year (4 hours or more)?</p>
+    <input type = "number" name = "q7">
+    <p>Do you recycle newspaper?</p>
+    <input type = "radio" name = "q8">Yes
+    <input type = "radio" name = "q8">No
+    <p>Do you recycle aluminum and tin?</p>
+    <input type = "radio" name = "q9">Yes
+    <input type = "radio" name = "q9">No
+    <p>How many people are in your household? </p>
+    <input type = "number" name = "q10">
+    <input type = "submit">
+  </form>
+  <script defer src="script.js"></script> 
+</body>
+
+</html>
+
+
