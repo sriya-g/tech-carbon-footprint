@@ -28,20 +28,18 @@ $amtCarbonEmitted = $vals[0]*4.61 + $vals[1]*55 + $vals[3]*3.7 + $vals[2]*50 + $
 $amtCarbonEmitted = $amtCarbonEmitted/1000;
 
 $carbonGrams = array($diffWebs*4.61, $hrsStreaming*55, $hrsZoomTogether*50, $hrsZoom1to1*3.7, $hrsmining*60200, $numEmails*13, $numPhotos*50, $numSearches*0.2, $numTweets*0.02, $numTexts*0.014);
-$carbonGrams2 = $carbonGrams
-rsort($carbonGrams2)
+$carbonGrams2 = $carbonGrams;
+rsort($carbonGrams2, 1);
 $carbonGrams2 = array_slice($carbonGrams2, 0, 3);
-$j = 0;
 $indexes = array(-1, -1, -1);
-while ($j < 3) {
   for ($i = 0; $i < sizeOf($vals); $i++) {
-    if ($carbonGrams[$i] == $carbonGrams2[$j]) {
-      $indexes[$j] = $i;
-      $j++;
+    for ($j = 0; $j < sizeOf($carbonGrams2); $j++) {
+        if ($carbonGrams[$i] == $carbonGrams2[$j]) {
+          $indexes[$j] = $i;
+    }
     }
   }
-}
-echo $indexes;
+
 ?>
 <div class = "results">
   <p>Your tech use emits about <?php echo $amtCarbonEmitted ?> kilograms of carbon dioxide per day.</p>
