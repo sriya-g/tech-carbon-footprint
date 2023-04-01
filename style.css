@@ -83,3 +83,6 @@ form {
 li {
   text-align: left;
 }
+.company {
+  display: flex;
+}
