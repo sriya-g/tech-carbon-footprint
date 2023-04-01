@@ -98,7 +98,37 @@ a:hover{
   border-radius: 20px;
   align: center;
 }
-#consumer-div, #business-div {
-  border: 2px solid #193441;
-  border-radius: 10px;
+
+#consumer-div{
+  margin-left:3%;
+  margin-right:2%;
+}
+#business-div{
+  margin-right:3%;
+  margin-left:2%;
+}
+#consumer-div, #business-div{
+  width:48%;
+}
+
+.mainstuff{
+  display:flex;
+  margin-top:30px;
+  margin-bottom:50px;
+}
+
+.company{
+  text-align:left;
+}
+
+#business-button, #consumer-button{
+  border-radius:13px;
+  background: #D1DBBD;
+  font-family: "Montserrat", sans-serif;
+  height:50px;
+  font-size:1.2em;
+  margin-bottom:20px;
+}
+#consfactspace, #busifactspace {
+  font-family: "Montserrat", sans-serif;
 }
