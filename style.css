@@ -1,10 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display&display=swap');
 html, body {
+  background: #D1DBBD;
+  color: #193441;;
   height: 100%;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  background-image: linear-gradient(#D1DBBD 50%, ##193441 50%);
+}
+nav{
+  display: flex; 
+  height:50px;
+  width:100%;
+  margin-top:10px;
+  justify-content:center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  align-self:start;
+}
+a{
+  margin: 5px 5% 0;
+  text-align: center;
+  color: #193441;
+  text-decoration:none;
+  display: inline-block;
+  position: relative;
+  opacity:0.5;
+  transition: all 0.25s ease-out;
+  cursor:pointer;
+}
+
+a:hover{
+  opacity:1;
+  font-size: large;
 }
 .header {
   font-family: 'Playfair Display', serif;
@@ -13,6 +40,14 @@ html, body {
 form {
   margin: 5%;
   padding: 5%;
-  background-color: #f8f9f9;
+  background-color: #fffff4;
   border-radius: 20px;
+}
+.subbutton {
+  margin: 2%;
+  border-radius: 2px;
+  align: left;
+  color: #193441;
+  background-color: #D1DBBD;
+  font-family: "Montserrat", sans-serif;
 }

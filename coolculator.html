@@ -10,30 +10,35 @@
 </head>
 
 <body>
-<h1 class = "header"> Tech Carbon Footprint Calculator</h1>
-<h2 class = "header">Take the survey below to calculate your carbon usage!</h2>
+        <nav class="navMenu">
+        <a href="index.html">Home</a>
+        <a href="stats.html">Popular Website Emissions</a>
+        <a href="#">Make a Change</a>
+      </nav>
+<h1 class = "header">Your Tech Carbon Emissions</h1>
+<h2 class = "header">Take the survey below to calculate your carbon usage when you use the Internet!</h2>
 <form action = "data.php" method="post">
     <p>How many different website do you visit on an average day?</p>
-    <input type = "number" name = "q1">
+    <input type = "number" name = "q1" min = "0">
     <p>How many hours do you spend watching videos online on an average day? (Ex: watching Youtube, Netflix, etc)</p>
-    <input type = "number" name = "q2">
+    <input type = "number" name = "q2" min = "0">
     <p>How many hours do you spend on online group videocalls in an average day?</p>
-    <input type = "number" name = "q3">
+    <input type = "number" name = "q3" min = "0">
       <p>How many hours do you spend on online 1:1 videocalls in an average day?</p>
-    <input type = "number" name = "q32">
+    <input type = "number" name = "q32" min = "0">
     <p>How many hours do you spend mining Bitcoin or other cryptocurrencies on an average day?</p>
-    <input type = "number" name = "q4">
+    <input type = "number" name = "q4" min = "0">
     <p>How many emails do you send on an average day?</p>
-    <input type = "number" name = "q5">
+    <input type = "number" name = "q5" min = "0">
     <p>How many photos do you send on an average day?</p>
-    <input type = "number" name = "q6">
+    <input type = "number" name = "q6" min = "0">
     <p>How many Google searches do you make per day on average?</p>
-    <input type = "number" name = "q7">
+    <input type = "number" name = "q7" min = "0">
     <p>How many Tweets do you make per day on average?</p>
-    <input type = "number" name = "q8">
+    <input type = "number" name = "q8" min = "0">
     <p>How many texts do you make per day on average?</p>
-    <input type = "number" name = "q9"> <br>
-    <input type = "submit">
+    <input type = "number" name = "q9" min = "0"> <br>
+    <input class = "subbutton" type = "submit" value = "Calculate!">
 </form>
 <script defer src="script.js"></script>
 </body>
