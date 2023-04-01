@@ -24,10 +24,16 @@ $numTexts = $_POST["q9"];
 
 $vals = array($diffWebs, $hrsStreaming, $hrsZoomTogether, $hrsZoom1to1, $hrsmining, $numEmails, $numPhotos, $numSearches, $numTweets, $numTexts);
 
+for ($i = 0; $i < sizeof($vals); $i++) {
+  if ($vals[$i] == "" || is_null($vals[$i])) {
+    $vals[$i] = "0";
+  }
+}
+
 $amtCarbonEmitted = $vals[0]*4.61 + $vals[1]*55 + $vals[3]*3.7 + $vals[2]*50 + $vals[5]*13 + $vals[6]*50 + $vals[7]*0.2 + $vals[8]*0.02 + $vals[9]*0.014 + $vals[4]*602000; //in GRAMS
 $amtCarbonEmitted = $amtCarbonEmitted/1000;
 
-$carbonGrams = array($diffWebs*4.61, $hrsStreaming*55, $hrsZoomTogether*50, $hrsZoom1to1*3.7, $hrsmining*60200, $numEmails*13, $numPhotos*50, $numSearches*0.2, $numTweets*0.02, $numTexts*0.014);
+$carbonGrams = array($vals[0]*4.61, $vals[1]*55, $vals[2]*50, $vals[3]*3.7, $vals[4]*60200, $vals[5]*13, $vals[6]*50, $vals[7]*0.2, $vals[8]*0.02, $vals[9]*0.014);
 $namesOfActivities = array("opening websites", "streaming video", "group video calls", "1:1 video calls", "cryptocurrency", "sending emails", "sending photos", "online searches", "Tweeting", "SMS texting");
 $vid = array("Download videos instead of streaming them - downloading means you can view the video multiple times from your local data instead of streaming and accessing the video on servers each time", "When listening to music, listen to audio files instead of streaming the music video", "Stream videos in lower quality");
 $serch = array("Make higher-quality searches so you will need to search less", "Switch to a search engine that offsets carbon emissions");
