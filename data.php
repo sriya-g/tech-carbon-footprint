@@ -22,10 +22,26 @@ $numSearches = $_POST["q7"];
 $numTweets = $_POST["q8"];
 $numTexts = $_POST["q9"];
 
-$vals = array($diffWebs, $hrsStreaming, $hrsZoomTogether, $hrsZoom1to1, $hrsmining, $numEmails, $numPhotos, $numPhotos, $numSearches, $numTweets, $numTexts);
+$vals = array($diffWebs, $hrsStreaming, $hrsZoomTogether, $hrsZoom1to1, $hrsmining, $numEmails, $numPhotos, $numSearches, $numTweets, $numTexts);
 
 $amtCarbonEmitted = $vals[0]*4.61 + $vals[1]*55 + $vals[3]*3.7 + $vals[2]*50 + $vals[5]*13 + $vals[6]*50 + $vals[7]*0.2 + $vals[8]*0.02 + $vals[9]*0.014 + $vals[4]*602000; //in GRAMS
 $amtCarbonEmitted = $amtCarbonEmitted/1000;
+
+$carbonGrams = array($diffWebs*4.61, $hrsStreaming*55, $hrsZoomTogether*50, $hrsZoom1to1*3.7, $hrsmining*60200, $numEmails*13, $numPhotos*50, $numSearches*0.2, $numTweets*0.02, $numTexts*0.014);
+$carbonGrams2 = $carbonGrams
+rsort($carbonGrams2)
+$carbonGrams2 = array_slice($carbonGrams2, 0, 3);
+$j = 0;
+$indexes = array(-1, -1, -1);
+while ($j < 3) {
+  for ($i = 0; $i < sizeOf($vals); $i++) {
+    if ($carbonGrams[$i] == $carbonGrams2[$j]) {
+      $indexes[$j] = $i;
+      $j++;
+    }
+  }
+}
+echo $indexes;
 ?>
 <div class = "results">
   <p>Your tech use emits about <?php echo $amtCarbonEmitted ?> kilograms of carbon dioxide per day.</p>
